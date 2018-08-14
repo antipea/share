@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" type="image/x-icon" href="/local/images/favicon.png">
+	<link href="../styles/styles.css" rel="stylesheet">
+	<script src="../scripts/jquery.js" defer></script>
+	<script src="../scripts/main.js" defer></script>
+	<title>InSync Pay</title>
+</head>
+<body>
+
+	<div class="root">
+		
+		<main>
+
+			<form class="page-block">
+				<div class="container">
+
+
+					<div class="page-icon flc">
+						<span class="logo">
+							<img src="../images/logo_insync.svg" alt="InSync by Alfa-Bank">
+						</span>
+					</div>
+
+
+					<div class="page-form flc">
+						<div class="form">
+							<div class="form-grid">
+								<div class="form-row flc">
+									<div class="rich-text-input js-rich-text-input rich-text-input--inverted">
+										<div class="rich-text-input__cell-label">
+											<label class="rich-text-input__label">Получатель</label>
+										</div>
+										<div class="rich-text-input__cell-input">
+											<input type="text" class="rich-text-input__input js-rich-text-input__input" value="Александр Сергеевич Иванов" readonly>
+										</div>
+									</div>
+								</div>
+								<div class="form-row flc">
+									<div class="rich-text-input js-rich-text-input rich-text-input--inverted">
+										<div class="rich-text-input__cell-label">
+											<label class="rich-text-input__label">IBAN</label>
+										</div>
+										<div class="rich-text-input__cell-input">
+											<input type="text" class="rich-text-input__input js-rich-text-input__input" value="BY28 NBRB 0000 0000 0000 0000 0007" readonly>
+										</div>
+									</div>
+								</div>
+								<div class="form-row flc">
+									<div class="rich-text-input js-rich-text-input rich-text-input--inverted">
+										<div class="rich-text-input__cell-label">
+											<label class="rich-text-input__label">Дата формирования</label>
+										</div>
+										<div class="rich-text-input__cell-input">
+											<input type="text" class="rich-text-input__input js-rich-text-input__input" value="01.03.2018" readonly>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row--offset flc form-error">
+									<div class="rich-text-input js-rich-text-input">
+										<div class="rich-text-input__cell-label">
+											<label class="rich-text-input__label">Сумма в BYN</label>
+										</div>
+										<div class="rich-text-input__cell-input">
+											<input type="tel" class="rich-text-input__input js-rich-text-input__input js-mask-input--price" value="42,80 BYN">
+										</div>
+									</div>
+									<div class="form-row__note flc">Минимум 1 BYN</div>
+									<div class="form-row__note form-row__note--error flc">Минимум 1 BYN!!!</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<h2 class="page-subtitle flc">Выберите способ перевода</h2>
+
+
+					<div class="page-action flc">
+						<div class="page-action__buttons flc">
+							<a class="btn btn--block disabled hidden-touch hidden-loading">Перевод через InSync</a>
+							<a href="#" class="btn btn--block hidden-no-touch hidden-loading">Перевод через InSync</a>
+						</div>
+						<div class="page-action__note flc">
+							Для перевода откройте эту страницу со смартфона с установленым приложением <a href="#" target="_blank">InSync</a>
+						</div>
+					</div>
+
+
+					<div class="page-action flc">
+						<div class="page-action__buttons flc">
+							<button type="submit" class="btn btn--block">Перевод с банковской карты</button>
+						</div>
+						<div class="page-action__icons flc">
+							<div class="pay-icons">
+								<div class="pay-icons__grid">
+									<div class="pay-icons__item">
+										<img src="../images/logo_mastercard.svg" alt="MasterCard" title="MasterCard">
+									</div>
+									<div class="pay-icons__item">
+										<img src="../images/logo_visa.svg" alt="VISA" title="VISA">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</form>	
+
+		</main>
+
+	</div>
+
+</body>
+</html>
