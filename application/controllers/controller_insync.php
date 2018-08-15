@@ -109,7 +109,7 @@ class Controller_Insync extends Controller
         ];
 
         $errorMessages = [
-            "sum" => "Минимум 1 BYN!",
+            "sum" => "Минимум 1 BYN",
         ];
 
         foreach ($userFormData as $itemKey => $itemVal) {

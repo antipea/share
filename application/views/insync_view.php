@@ -67,9 +67,9 @@
                             </div>
                         </div>
                         <? if ($isErrorSum): ?>
-                            <div class="form-row__note form-row__note--error flc">Минимум 1 BYN!!!</div>
+                            <div class="form-row__note form-row__note--error flc"><?= $data["errors"]["sum"] ?></div>
                         <? else: ?>
-                            <div class="form-row__note flc"><?= $data["errors"]["sum"] ?></div>
+                            <div class="form-row__note flc">Минимум 1 BYN</div>
                         <? endif; ?>
                     </div>
                 </div>

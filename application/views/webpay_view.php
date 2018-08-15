@@ -1,3 +1,5 @@
+<? include 'insync_view.php'; ?>
+
 <form method="post" action="<?= $data["webpay_url"]?>" target="_self">
 
     <? foreach( $data["webpay"] as $key => $value ): ?>
