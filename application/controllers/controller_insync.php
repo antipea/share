@@ -60,9 +60,16 @@ class Controller_Insync extends Controller
                 break;
         }
 
+        $this->sendIncrement($resultUserData);
+
 
     }
 
+
+    protected function sendIncrement($resultData)
+    {
+        $this->model->getInfoByTransferId($resultData["transferLinkId"]);
+    }
 
     protected function prepareFieldsWebpay($dataUser)
     {

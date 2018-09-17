@@ -8,21 +8,27 @@
 class Model_Insync extends Model
 {
 
-    const PATH = 'https://chat.alfa-bank.by/ibsvc/api/transferLink/info';
+    const PATH = 'https://chat.alfabank.by/ibsvc/api/transferLink';
 
     function getInfoByTransferId($tranfserLinkId)
     {
-        $result = $this->getDataFromMiddle(["transferLinkId" => $tranfserLinkId]);
+        $result = $this->getDataFromMiddle(["transferLinkId" => $tranfserLinkId], self::PATH . "/info");
 
         return $result;
     }
 
 
-    protected function getDataFromMiddle($param = [])
+    function sendInfoByIncrement($transferLinkId)
+    {
+        $this->getDataFromMiddle(["transferLinkId" => $transferLinkId], self::PATH . "/userIncrement");
+    }
+
+
+    protected function getDataFromMiddle($param = [], $path)
     {
         $curl = @curl_init();
         curl_setopt($curl, CURLOPT_HTTPHEADER, ["Content-Type:application/json"]);
-        curl_setopt($curl, CURLOPT_URL, self::PATH);
+        curl_setopt($curl, CURLOPT_URL, $path);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode( $param ));
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
