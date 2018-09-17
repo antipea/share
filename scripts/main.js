@@ -66,10 +66,14 @@ var View = new (function ()
 			inputHelpers: function ()
 			{
 				function formatPrice(value) {
+					if(!value)
+						value = 0;
 					return parseFloat(parsePrice(value)).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' BYN';
 				}
 
 				function parsePrice(value) {
+					if(!value)
+						value = 0;
 					return parseFloat(value.toString().replace(' ', '').replace(',', '.').replace(/[^0-9.]/g, ''));
 				}
 
@@ -118,11 +122,17 @@ var View = new (function ()
 		local: {
 			richTextInput: function(scope) {
 				$('.js-rich-text-input__input', scope).off('focus.richTextInputFocus').on('focus.richTextInputFocus', function() {
-					$(this).closest('.js-rich-text-input').addClass('focus');
+					var t = $(this);
+					if(!t.prop('readonly')) {
+						t.closest('.js-rich-text-input').addClass('focus');
+					}
 				});
 
 				$('.js-rich-text-input__input', scope).off('blur.richTextInputBlur').on('blur.richTextInputBlur', function() {
-					$(this).closest('.js-rich-text-input').removeClass('focus');
+					var t = $(this);
+					if(!t.prop('readonly')) {
+						t.closest('.js-rich-text-input').removeClass('focus');
+					}
 				});
 			}
 		}
