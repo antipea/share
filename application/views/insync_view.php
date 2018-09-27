@@ -25,6 +25,7 @@
                             </div>
                         </div>
                     </div>
+                    <? /*
                     <div class="form-row flc">
                         <div class="rich-text-input js-rich-text-input rich-text-input--inverted">
                             <div class="rich-text-input__cell-label">
@@ -35,7 +36,7 @@
                                        value="<?= $data["accountIBAN"] ?>" readonly>
                             </div>
                         </div>
-                    </div>
+                    </div> */?>
                     <div class="form-row flc">
                         <div class="rich-text-input js-rich-text-input rich-text-input--inverted">
                             <div class="rich-text-input__cell-label">
