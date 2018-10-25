@@ -77,7 +77,7 @@ class Controller_Insync extends Controller
             "wsb_storeid"           => self::STORE_ID,
             "secret_key"            => self::SECRET_KEY,
             "wsb_invoice_item_name" => "Пополнение счета",
-            "wsb_service_number"    => "4439061",
+            "wsb_service_number"    => "4495471",
         ];
 
         $dataUser['sum'] = str_replace(",", ".", preg_replace("/\s/", "", $dataUser["sum"]));
