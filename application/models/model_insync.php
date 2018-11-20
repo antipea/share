@@ -8,6 +8,7 @@
 class Model_Insync extends Model
 {
 
+//    const PATH = 'http://93.84.121.106/ibsvc/api/transferLink';
     const PATH = 'https://chat.alfabank.by/ibsvc/api/transferLink';
 
     function getInfoByTransferId($tranfserLinkId)

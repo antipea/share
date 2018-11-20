@@ -50,8 +50,9 @@ class Controller_Insync extends Controller
 
         switch ($userFormData["submitForm"]) {
             case 'insync':
+                $fieldsInsync = $this->prepareFieldsInsync($resultUserData);
                 $this->view->generate('submitinsync_view.php', 'template_view.php',
-                    array_merge($resultUserData));
+                    array_merge($resultUserData, ["insync" => $fieldsInsync]));
                 break;
             case 'bank':
                 $fieldsWebpay = $this->prepareFieldsWebpay($resultUserData);
@@ -69,6 +70,17 @@ class Controller_Insync extends Controller
     protected function sendIncrement($resultData)
     {
         $this->model->getInfoByTransferId($resultData["transferLinkId"]);
+    }
+
+
+    protected function prepareFieldsInsync($dataUser)
+    {
+        $data = [];
+        $dataUser['sum'] = str_replace(",", ".", preg_replace("/\s/", "", $dataUser["sum"]));
+        $dataUser['sum'] = intval( $dataUser["sum"] * 100 )/ 100;
+        list($ceil, $division) = explode(".", number_format($dataUser['sum'], 2, ".", ""));
+        $data["id"] = strlen($ceil) . $ceil . $dataUser["transferLinkId"] . $division;
+        return $data;
     }
 
     protected function prepareFieldsWebpay($dataUser)
@@ -134,7 +146,7 @@ class Controller_Insync extends Controller
     {
         $postKeys = ['sum', 'submitForm'];
         $prepareFunc = [
-            'sum' => function ($val) { $val = str_replace(",", ".", $val); return floatval($val); },
+            'sum' => function ($val) { $val = str_replace(",", ".", preg_replace("/\s/", "", $val)); return floatval($val); },
         ];
 
         $data = [];
