@@ -133,8 +133,13 @@ body:not(.page-loaded) .hidden-loading{display: none;}
 
 
 
-@media (max-width: 639px) {
-	.root{padding: 20px 0 40px;}
+@media (max-width: 479px) {
+	.rich-text-input--static{display: block; padding: 18px 0;}
+	.rich-text-input--static .rich-text-input__cell-label,
+	.rich-text-input--static .rich-text-input__cell-input{display: block; width: auto; height: auto; padding-right: 0;}
+	.rich-text-input--static .rich-text-input__cell-label::before{display: none;}
+	.rich-text-input--static .rich-text-input__cell-label + .rich-text-input__cell-input{padding-top: 0;}
+	.rich-text-input--static .rich-text-input__input{padding: 0; height: auto; text-align: left;}
 }
 
 
