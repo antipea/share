@@ -92,7 +92,7 @@ button{border: none; background: transparent; outline: none; font-family: 'Robot
 .rich-text-input{display: table; width: 100%; border-bottom: 1px solid #eef0f2; transition: .2s;}
 .rich-text-input.focus{border-bottom-color: #1C75A8;}
 .rich-text-input__cell-label,
-.rich-text-input__cell-input{display: table-cell; vertical-align: bottom; height: 55px;}
+.rich-text-input__cell-input{display: table-cell; vertical-align: top; height: 55px;}
 .rich-text-input__cell-label{white-space: nowrap; width: 1px; padding-right: 15px;}
 .rich-text-input__cell-input{width: 100%;}
 .rich-text-input__cell-label::before{content: ''; display: inline-block; vertical-align: middle; height: 55px;}
@@ -102,6 +102,7 @@ button{border: none; background: transparent; outline: none; font-family: 'Robot
 .rich-text-input__input:read-only{cursor: default;}
 .rich-text-input--inverted .rich-text-input__label{color: #243B55; font-size: 14px; line-height: 19px;}
 .rich-text-input--inverted .rich-text-input__input{font-size: 12px; color: rgba(36,59,85,.5);}
+.rich-text-input--static .rich-text-input__input{height: auto; min-height: 55px;}
 
 .form-error .rich-text-input{border-bottom-color: #FE4834;}
 .form-error .rich-text-input__label{color: #FE4834;}
@@ -139,7 +140,7 @@ body:not(.page-loaded) .hidden-loading{display: none;}
 	.rich-text-input--static .rich-text-input__cell-input{display: block; width: auto; height: auto; padding-right: 0;}
 	.rich-text-input--static .rich-text-input__cell-label::before{display: none;}
 	.rich-text-input--static .rich-text-input__cell-label + .rich-text-input__cell-input{padding-top: 0;}
-	.rich-text-input--static .rich-text-input__input{padding: 0; height: auto; text-align: left;}
+	.rich-text-input--static .rich-text-input__input{padding: 0; height: auto; min-height: 0; text-align: left;}
 }
 
 
