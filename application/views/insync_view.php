@@ -15,13 +15,16 @@
             <div class="form">
                 <div class="form-grid">
                     <div class="form-row flc">
-                        <div class="rich-text-input js-rich-text-input rich-text-input--inverted">
+                        <div class="rich-text-input js-rich-text-input rich-text-input--inverted rich-text-input--static">
                             <div class="rich-text-input__cell-label">
                                 <label class="rich-text-input__label">Получатель</label>
                             </div>
                             <div class="rich-text-input__cell-input">
+                                <?/*
                                 <input type="text" class="rich-text-input__input js-rich-text-input__input"
                                        value="<?= $data["user"] ?>" readonly>
+                                */?>
+                                <div class="rich-text-input__input"><?= $data["user"] ?></div>
                             </div>
                         </div>
                     </div>
@@ -38,7 +41,7 @@
                         </div>
                     </div> */?>
                     <div class="form-row flc">
-                        <div class="rich-text-input js-rich-text-input rich-text-input--inverted">
+                        <div class="rich-text-input js-rich-text-input rich-text-input--inverted rich-text-input--static">
                             <div class="rich-text-input__cell-label">
                                 <label class="rich-text-input__label">Дата формирования</label>
                             </div>
@@ -48,19 +51,25 @@
                                 $dateUpdate = new DateTime();
                                 $dateUpdate->setTimestamp($data["lastUpdate"]/1000);
                                 ?>
+                                <?/*
                                 <input type="text" class="rich-text-input__input js-rich-text-input__input"
                                        value="<?= $dateUpdate->format("d.m.Y") ?>" readonly>
+                                */?>
+                                <div class="rich-text-input__input"><?= $dateUpdate->format("d.m.Y") ?></div>
                             </div>
                         </div>
                     </div>
                     <div class="form-row flc">
-                        <div class="rich-text-input js-rich-text-input rich-text-input--inverted">
+                        <div class="rich-text-input js-rich-text-input rich-text-input--inverted rich-text-input--static">
                             <div class="rich-text-input__cell-label">
                                 <label class="rich-text-input__label">Описание платежа</label>
                             </div>
                             <div class="rich-text-input__cell-input">
+                                <?/*
                                 <input type="text" class="rich-text-input__input js-rich-text-input__input"
                                        value="<?= $data["comment"] ?>" readonly>
+                                */?>
+                                <div class="rich-text-input__input"><?= $data["comment"] ?></div>
                             </div>
                         </div>
                     </div>
