@@ -63,9 +63,9 @@ class Route
 
     static function ErrorPage404()
     {
-        $host = 'https://' . $_SERVER['HTTP_HOST'] . '/';
-        header('HTTP/1.1 404 Not Found');
-        header("Status: 404 Not Found");
+        $host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+        header('HTTP/1.1 302 Found');
+        header("Status: 302 Found");
         header('Location:' . $host . '404');
     }
 
