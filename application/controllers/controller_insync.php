@@ -4,8 +4,8 @@ class Controller_Insync extends Controller
 {
 
     const STORE_ID = '591881877';
-    const SECRET_KEY = 'hjdpUJU78322-=';
-    const WEBPAY_URL = 'https://payment.webpay.by/services';
+    const SECRET_KEY = '1234567890';
+    const WEBPAY_URL = 'https://ecom.alfabank.by/webpay-proxy/webPayRequest';
 
 
     function __construct()
