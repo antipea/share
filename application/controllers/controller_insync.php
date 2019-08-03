@@ -105,15 +105,17 @@ class Controller_Insync extends Controller
             "wsb_invoice_item_quantity[]" => "1",
             "wsb_invoice_item_price[]"    => $dataUser['sum'],
             "wsb_total"                   => $dataUser['sum'],
-            "wsb_email"                   => "",
+//            "wsb_email"                   => "",
             "wsb_test"                    => "",
-            "wsb_seed"                    => microtime(),
+            "wsb_return_url"              => "https://alfabank.by",
+            "wsb_cancel_return_url"       => "https://alfabank.by",
+            "wsb_seed"                    => time(),
             "wsb_service_number"          => $constData["wsb_service_number"],
             "wsb_order_tag"               => "SITE-" . $constData["wsb_service_number"],
             "wsb_service_account"         => $dataUser["accountIBAN"],
         ];
 
-        $dataWebpay['wsb_signature'] = sha1($dataWebpay["wsb_seed"] . $dataWebpay["wsb_storeid"] . $dataWebpay["wsb_order_num"] . $dataWebpay["wsb_test"] . $dataWebpay["wsb_currency_id"] . $dataWebpay["wsb_total"] . $dataWebpay["wsb_service_number"] . $dataWebpay["wsb_service_account"] . $constData["secret_key"]);
+        $dataWebpay['wsb_signature'] = sha1($dataWebpay["wsb_seed"] . $dataWebpay["wsb_storeid"] . $dataWebpay["wsb_order_num"] . $dataWebpay["wsb_test"] . $dataWebpay["wsb_currency_id"] . $dataWebpay["wsb_total"]. $constData["secret_key"]);
 
         return $dataWebpay;
     }
