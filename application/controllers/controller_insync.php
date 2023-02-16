@@ -6,6 +6,7 @@ class Controller_Insync extends Controller
     const STORE_ID = '591881877';
     const SECRET_KEY = '1234567890';
     const WEBPAY_URL = 'https://ecom.alfabank.by/webpay-proxy/webPayRequest';
+    const VERSION = 'INSNC3';
 
 
     function __construct()
@@ -28,16 +29,21 @@ class Controller_Insync extends Controller
 
     function action_send()
     {
-
-        $middleData = $this->getMiddleData();
-
-        if (empty($middleData) || !$middleData["accountIBAN"]) {
-            Route::ErrorPage404();
+        // Insync3.0
+        if ($_REQUEST["version"] == self::VERSION) {
+           $middleDataINSNC = $this->getMiddleDataINSNC(); 
+            if (empty($middleDataINSNC) || !$middleDataINSNC["accountIBAN"]) {
+                Route::ErrorPage404();
+            }
+        } else {
+            $middleData = $this->getMiddleData();
+            if (empty($middleData) || !$middleData["accountIBAN"]) {
+                Route::ErrorPage404();
+            }
         }
-
+        
         $userFormData = $this->getUserFormData();
         $userFormErrors = $this->validateUserFormData($userFormData);
-
 
         $resultUserData = array_merge($middleData, $userFormData);
 
@@ -163,6 +169,15 @@ class Controller_Insync extends Controller
     }
 
     protected function getMiddleData()
+    {
+        $transferLinkId = $_REQUEST["transferLinkId"];
+        $data = (array)$this->model->getInfoByTransferId($transferLinkId);
+        $data['transferLinkId'] = $transferLinkId;
+
+        return $data;
+    }
+
+    protected function getMiddleDataINSNC()
     {
         $transferLinkId = $_REQUEST["transferLinkId"];
         $data = (array)$this->model->getInfoByTransferId($transferLinkId);

@@ -8,7 +8,8 @@
     <div class="container">
         <div class="page-icon flc">
             <span class="logo">
-                <img src="/images/logo_insync.svg" alt="InSync by Alfa-Bank">
+                <img src="/images/logo_alfa-bank.png" alt="INSNC by Alfa-Bank">
+                <!-- <svg class="svg-icon logo-text"><use xlink:href="#logo_text"></use></svg> -->
             </span>
         </div>
         <div class="page-form flc">
@@ -100,8 +101,8 @@
 
         <h2 class="page-subtitle flc">Выберите способ перевода</h2>
 
-
-        <div class="page-action flc">
+        <!-- Old markup for Insync  -->
+        <!-- <div class="page-action flc">
             <div class="page-action__buttons flc">
                 <a class="btn btn--block disabled hidden-touch hidden-loading">Перевод через InSync</a>
                 <button type="submit" name="submitForm" value="insync"
@@ -113,7 +114,7 @@
                 <a href="#" target="_blank">InSync</a>
             </div>
         </div>
-
+        -->
 
         <div class="page-action flc">
             <div class="page-action__buttons flc">
