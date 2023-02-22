@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:locale" content="ru_BY" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="InSync by Alfa-Bank" />
+  <meta property="og:image" content="./images/alfabank.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+  <link href="./styles/styles.css" rel="stylesheet">
+  <script src="./scripts/jquery.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
+  <title>InSync Pay</title>
+</head>
+
+<body>
+
+  <div class="root">
+
+    <main>
+      <form method="post" action="/Insync/send" class="page-block">
+        <input type="hidden" name="transferLinkId" value="">
+        <input type="submit" name="submitForm" value="bank" style="display: none">
+        <div class="container">
+          <div class="page-icon flc">
+            <span class="logo">
+              <img src="./images/logo_alfa-bank.png" alt="INSNC by Alfa-Bank">
+              <!-- <svg class="svg-icon logo-text"><use xlink:href="#logo_text"></use></svg> -->
+            </span>
+          </div>
+          <div class="page-form flc">
+            <div class="form">
+              <div class="form-grid">
+                <div class="form-row flc">
+                  <div class="rich-text-input js-rich-text-input rich-text-input--inverted rich-text-input--static">
+                    <div class="rich-text-input__cell-label">
+                      <label class="rich-text-input__label">Получатель</label>
+                    </div>
+                    <div class="rich-text-input__cell-input">
+
+                      <div class="rich-text-input__input">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row flc">
+                  <div class="rich-text-input js-rich-text-input rich-text-input--inverted rich-text-input--static">
+                    <div class="rich-text-input__cell-label">
+                      <label class="rich-text-input__label">Дата формирования</label>
+                    </div>
+                    <div class="rich-text-input__cell-input">
+
+                      <div class="rich-text-input__input">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row flc">
+                  <div class="rich-text-input js-rich-text-input rich-text-input--inverted rich-text-input--static">
+                    <div class="rich-text-input__cell-label">
+                      <label class="rich-text-input__label">Описание платежа</label>
+                    </div>
+                    <div class="rich-text-input__cell-input">
+
+                      <div class="rich-text-input__input">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row form-row--offset flc ">
+                  <div class="rich-text-input js-rich-text-input">
+                    <div class="rich-text-input__cell-label">
+                      <label class="rich-text-input__label">Сумма в BYN</label>
+                    </div>
+                    <div class="rich-text-input__cell-input">
+                      <input type="text" name="sum"
+                        class="rich-text-input__input js-rich-text-input__input js-mask-input--price" value=" BYN">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <h2 class="page-subtitle flc">Выберите способ перевода</h2>
+
+          <!-- Old markup for Insync  -->
+          <!-- <div class="page-action flc">
+            <div class="page-action__buttons flc">
+                <a class="btn btn--block disabled hidden-touch hidden-loading">Перевод через InSync</a>
+                <button type="submit" name="submitForm" value="insync"
+                        class="btn btn--block hidden-no-touch hidden-loading">Перевод через InSync
+                </button>
+            </div>
+            <div class="page-action__note flc">
+                Для перевода откройте эту страницу со смартфона с установленым приложением
+                <a href="#" target="_blank">InSync</a>
+            </div>
+        </div>
+        -->
+
+          <div class="page-action flc insnc-new">
+            <div class="page-action__info">
+              <div class="page-action__icon">
+                <img src="./images/logo_insnc.png" alt="INSNC" title="INSNC">
+              </div>
+              <div class="page-action__note flc insnc-new">
+
+                <div class="page-action__note header">Через новый мобильный банк INSNC</div>
+                <div class="page-action__note description">Для перевода откройте эту страницу со смартфона с
+                  установленным приложением <a href="#" target="_blank">INSNC</a></div>
+
+              </div>
+            </div>
+            <div class="page-action__buttons flc insnc-new">
+              <a class="btn btn--block disabled hidden-touch hidden-loading">Перевод через InSync</a>
+              <button type="submit" name="submitForm" value="insync"
+                class="btn btn--block hidden-no-touch hidden-loading">Перевод через InSync
+              </button>
+            </div>
+
+          </div>
+
+          <div class="page-action flc new-note">
+            <div class="page-action__note flc">или</div>
+          </div>
+
+          <div class="page-action flc">
+            <div class="page-action__buttons flc">
+              <button type="submit" name="submitForm" value="bank" class="btn btn--block">Перевод с банковской карты
+              </button>
+            </div>
+            <div class="page-action__icons flc">
+              <div class="pay-icons">
+                <div class="pay-icons__grid">
+                  <div class="pay-icons__item">
+                    <img src="./images/logo_mastercard.svg" alt="MasterCard" title="MasterCard">
+                  </div>
+                  <div class="pay-icons__item">
+                    <img src="./images/logo_visa.svg" alt="VISA" title="VISA">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>
