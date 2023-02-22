@@ -43,9 +43,7 @@
                     </div>
                     <div class="rich-text-input__cell-input">
 
-                      <div class="rich-text-input__input">
-
-                      </div>
+                      <div class="rich-text-input__input">ВАНГАЕВ АЛЕКСЕЙ АЛЕКСАНДРОВИЧ</div>
                     </div>
                   </div>
                 </div>
@@ -57,9 +55,7 @@
                     </div>
                     <div class="rich-text-input__cell-input">
 
-                      <div class="rich-text-input__input">
-
-                      </div>
+                      <div class="rich-text-input__input">09.02.2023</div>
                     </div>
                   </div>
                 </div>
@@ -70,23 +66,23 @@
                     </div>
                     <div class="rich-text-input__cell-input">
 
-                      <div class="rich-text-input__input">
-
-                      </div>
+                      <div class="rich-text-input__input">Разделение счёта</div>
                     </div>
                   </div>
                 </div>
 
                 <div class="form-row form-row--offset flc ">
-                  <div class="rich-text-input js-rich-text-input">
-                    <div class="rich-text-input__cell-label">
-                      <label class="rich-text-input__label">Сумма в BYN</label>
+                  <div class="rich-text-input js-rich-text-input insnc-new-future">
+                    <div class="rich-text-input__cell-label insnc-new-future">
+                      <label class="rich-text-input__label">Сумма</label>
                     </div>
-                    <div class="rich-text-input__cell-input">
+                    <div class="rich-text-input__cell-input insnc-new-future">
                       <input type="text" name="sum"
-                        class="rich-text-input__input js-rich-text-input__input js-mask-input--price" value=" BYN">
+                        class="rich-text-input__input insnc-new-future js-rich-text-input__input js-mask-input--price"
+                        value="47,02 BYN">
                     </div>
                   </div>
+                  <div class="removeSum"><span class="crosssign"></span></div>
 
                 </div>
               </div>
@@ -94,65 +90,58 @@
           </div>
 
 
-          <h2 class="page-subtitle flc">Выберите способ перевода</h2>
+          <h2 class="page-subtitle flc insnc-new-future">Выберите способ перевода</h2>
 
-          <!-- Old markup for Insync  -->
-          <!-- <div class="page-action flc">
-            <div class="page-action__buttons flc">
-                <a class="btn btn--block disabled hidden-touch hidden-loading">Перевод через InSync</a>
-                <button type="submit" name="submitForm" value="insync"
-                        class="btn btn--block hidden-no-touch hidden-loading">Перевод через InSync
-                </button>
+          <div class="page-action flc insnc-new-future">
+            <div class="page-action__radio-button">
+              <button id="btn1" class="btn__insnc-new-future" type="button" aria-pressed="false"></button>
             </div>
-            <div class="page-action__note flc">
-                Для перевода откройте эту страницу со смартфона с установленым приложением
-                <a href="#" target="_blank">InSync</a>
-            </div>
-        </div>
-        -->
-
-          <div class="page-action flc insnc-new">
             <div class="page-action__info">
-              <div class="page-action__icon">
-                <img src="./images/logo_insnc.png" alt="INSNC" title="INSNC">
-              </div>
+
               <div class="page-action__note flc insnc-new">
 
-                <div class="page-action__note header">Через новый мобильный банк INSNC</div>
-                <div class="page-action__note description">Для перевода откройте эту страницу со смартфона с
-                  установленным приложением <a href="#" target="_blank">INSNC</a></div>
+                <div class="page-action__note header">Перевод с помощью нового INSNC</div>
+                <div class="page-action__note description">Откройте эту страницу со смартфона с установленным
+                  приложением INSNC</div>
 
               </div>
             </div>
-            <div class="page-action__buttons flc insnc-new">
-              <a class="btn btn--block disabled hidden-touch hidden-loading">Перевод через InSync</a>
-              <button type="submit" name="submitForm" value="insync"
-                class="btn btn--block hidden-no-touch hidden-loading">Перевод через InSync
-              </button>
-            </div>
 
+            <div class="page-action__icon">
+              <img src="./images/logo_insnc.png" alt="INSNC" title="INSNC">
+            </div>
           </div>
 
-          <div class="page-action flc new-note">
-            <div class="page-action__note flc">или</div>
+          <div class="page-action flc insnc-new-future">
+            <div class="page-action__radio-button">
+              <button id="btn2" class="btn__insnc-new-future" type="button" aria-pressed="false"></button>
+            </div>
+            <div class="page-action__info">
+
+              <div class="page-action__note flc insnc-new">
+
+                <div class="page-action__note header">Перевод с банковской карты</div>
+                <div class="page-action__note description">Mastercard, VISA</div>
+
+              </div>
+            </div>
+
+            <div class="pay-icons insnc-new-future">
+              <div class="pay-icons__grid insnc-new-future">
+                <div class="pay-icons__item insnc-new-future">
+                  <img src="./images/logo_mastercard.svg" alt="MasterCard" title="MasterCard">
+                </div>
+                <div class="pay-icons__item insnc-new-future">
+                  <img src="./images/logo_visa.svg" alt="VISA" title="VISA">
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="page-action flc">
-            <div class="page-action__buttons flc">
-              <button type="submit" name="submitForm" value="bank" class="btn btn--block">Перевод с банковской карты
+            <div class="page-action__buttons flc insnc-new-future">
+              <button type="submit" name="submitForm" value="bank" class="btn btn--block insnc-new-future">Перевести
               </button>
-            </div>
-            <div class="page-action__icons flc">
-              <div class="pay-icons">
-                <div class="pay-icons__grid">
-                  <div class="pay-icons__item">
-                    <img src="./images/logo_mastercard.svg" alt="MasterCard" title="MasterCard">
-                  </div>
-                  <div class="pay-icons__item">
-                    <img src="./images/logo_visa.svg" alt="VISA" title="VISA">
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -163,6 +152,44 @@
     </main>
 
   </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const b1 = new OnOffButton("#btn1");
+      const b2 = new OnOffButton("#btn2");
+      const inputSum = new OnRemoveButton('.removeSum');
+      console.log(b1, b2, inputSum);
+    });
+
+    class OnOffButton {
+      constructor(el) {
+        this.el = document.querySelector(el);
+        this.el?.addEventListener("click", this.power.bind(this));
+      }
+      power() {
+        const pressed = this.el?.getAttribute("aria-pressed") === "true";
+        const itemPressed = document.querySelector("[aria-pressed='true']");
+        if (itemPressed !== null && itemPressed !== this.el) {
+          itemPressed.setAttribute("aria-pressed", 'false');
+        }
+        if (pressed === false) {
+          this.el?.setAttribute("aria-pressed", `${!pressed}`);
+        }
+      }
+    }
+    class OnRemoveButton {
+      constructor(el) {
+        this.el = document.querySelector(el);
+        this.el?.addEventListener("click", this.power.bind(this));
+      }
+      power() {
+        let removeSum = document.querySelector("[name='sum']");
+        if (removeSum.value) {
+          removeSum.value = '';
+          return;
+        }
+      }
+    }
+  </script>
 
 </body>
 
