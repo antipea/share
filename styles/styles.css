@@ -153,7 +153,6 @@ button {
 	text-align: center;
 	text-decoration: none;
 	outline: none;
-	/* text-transform: uppercase; */
 	overflow: hidden;
 	white-space: nowrap;
 	transition: .2s;
@@ -200,7 +199,7 @@ button {
 /* --- page parts --- */
 .page-icon {
 	margin: 32px 0;
-	text-align: center;
+	text-align: left;
 }
 
 .page-form {
@@ -231,12 +230,10 @@ button {
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 16px;
-
 	max-width: 430px;
 	min-height: 170px;
 	background: #F3F4F5;
 	border-radius: 12px;
-
 	flex: none;
 	order: 11;
 	align-self: stretch;
@@ -248,14 +245,11 @@ button {
 	flex-direction: row;
 	align-items: center;
 	vertical-align: baseline;
-	/* justify-content: space-between; */
 	padding: 0px 16px;
-
 	max-width: 420px;
 	min-height: 92px;
 	background: #F3F4F5;
 	border-radius: 16px;
-
 	flex: none;
 	order: 9;
 	align-self: stretch;
@@ -315,16 +309,11 @@ button {
 	justify-content: center;
 	align-items: center;
 	padding: 11px 20px;
-
 	max-width: 398px;
 	height: 38px;
-
 	background: #EF3124;
 	opacity: 0.3;
 	border-radius: 8px;
-
-	/* Inside auto layout */
-
 	flex: none;
 	order: 1;
 	align-self: stretch;
@@ -341,13 +330,10 @@ button {
 	justify-content: center;
 	align-items: center;
 	padding: 16px 28px;
-
 	max-width: 420px;
 	min-height: 56px;
-
 	background: linear-gradient(113.25deg, #FF4134 44.21%, #EF24AA 120.72%);
 	border-radius: 12px;
-
 	flex: none;
 	order: 13;
 	align-self: stretch;
@@ -355,28 +341,16 @@ button {
 	padding: 0;
 }
 
-/* .page-action__radio-button {
-	display: flex;
-	flex: 1;
-	padding: 1.5em 0;
-} */
-
 .btn__insnc-new-future {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	box-shadow:
-		0 0 0 0.125em hsla(var(--hue2), var(--sat2), 50%, 0),
-		0 0 0.25em hsl(var(--hue), var(--sat), 55%) inset,
-		0 0.125em 0.125em hsl(var(--hue), var(--sat), 90%);
 	cursor: pointer;
 	margin: auto;
 	outline: transparent;
 	position: relative;
 	transition: box-shadow var(--trans-dur) var(--trans-timing);
 	-webkit-tap-highlight-color: transparent;
-	/* position: absolute; */
-
 	left: calc(50% - 20px/2);
 	top: calc(50% - 20px/2);
 	background: #FFFFFF;
@@ -390,25 +364,6 @@ button {
 		0 0.125em 0.125em hsl(var(--hue), var(--sat), 90%);
 }
 
-/*.btn:before,
-.btn:after {
-	border-radius: inherit;
-	content: "";
-	display: block;
-	position: absolute;
-}
-.btn:before {
-	background-image: linear-gradient(hsl(var(--hue),var(--sat),90%),hsl(var(--hue),var(--sat),80%));
-	box-shadow: 0 0.75em 0.75em 0.25em hsla(var(--hue),0%,0%,0.3);
-	top: 1.5em;
-	left: 1.5em;
-	width: 7em;
-	height: 7em;
-	transition:
-		box-shadow var(--trans-dur) var(--trans-timing2),
-		transform var(--trans-dur) var(--trans-timing2);
-}*/
-
 .btn__insnc-new-future:after {
 	border-radius: inherit;
 	content: "";
@@ -416,25 +371,6 @@ button {
 	position: absolute;
 }
 
-/* .btn__insnc-new-future:after {
-	background-color: hsl(var(--hue), var(--sat), 75%);
-	background-image: linear-gradient(hsla(var(--hue), var(--sat), 90%, 0), hsl(var(--hue), var(--sat), 90%));
-	box-shadow:
-		0 0.0625em 0 hsl(var(--hue), var(--sat), 90%) inset,
-		0 -0.0625em 0 hsl(var(--hue), var(--sat), 90%) inset,
-		0 0 0 0 hsla(var(--hue2), var(--sat2), var(--light2), 0.1) inset;
-	top: 3em;
-	left: 3em;
-	width: 4em;
-	height: 4em;
-	transition:
-		background-color var(--trans-dur) var(--trans-timing),
-		box-shadow var(--trans-dur) var(--trans-timing),
-		transform var(--trans-dur) var(--trans-timing2);
-} */
-
-/*.btn__insnc-new-future[aria-pressed="true"]:before,
- .btn__insnc-new-future[aria-pressed="true"]:after, */
 .btn__insnc-new-future[aria-pressed="true"] {
 	background: #6333CC;
 }
@@ -457,38 +393,6 @@ button {
 	top: calc(50% - 6px/2);
 	background: #FFFFFF;
 }
-
-/* .close {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	width: 55px;
-	height: 55px;
-	cursor: pointer;
-	border: 4px solid #e62f57;
-	border-radius: 50%;
-}
-
-.close:before,
-.close:after {
-	content: "";
-	position: absolute;
-	top: 21px;
-	left: 10px;
-	width: 26px;
-	height: 4px;
-	background: #e62f57;
-}
-
-.close:before {
-	webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.close:after {
-	webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-} */
 
 .crosssign {
 	display: inline-grid;
@@ -711,13 +615,6 @@ button {
 	color: #FE4834;
 }
 
-
-
-/* --- logo old
-.logo{display: inline-block; vertical-align: top; width: 102px; height: 53px;}
-.logo img{display: inline-block; vertical-align: middle; max-width: 100%; max-height: 100%;}
---- */
-
 /* --- logo new--- */
 .logo {
 	display: inline-block;
@@ -823,9 +720,12 @@ body:not(.page-loaded) .hidden-loading {
 		min-height: 0;
 		text-align: left;
 	}
+
+	.page-action__note.description {
+		display: none;
+	}
+
 }
-
-
 
 @media (max-width: 359px) {
 	.container {
